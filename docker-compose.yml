@@ -18,12 +18,12 @@ services:
       - db
       - redis
     links:
-      - redis
       - db
+      - redis
     ports:
       - '8888:8888'
     environment:
-      - REDIS_POST=6379
+      - REDIS_PORT=6379
       - REDIS_HOST=redis
-      - DB_HOST=db
       - DB_PORT=5432
+      - DB_HOST=db

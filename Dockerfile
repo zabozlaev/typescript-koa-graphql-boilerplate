@@ -8,6 +8,8 @@ RUN npm install
 
 COPY . .
 
+# THIS IS ONLY IF YOU ARE RUNNING IN PROD 
+
 RUN npm run build
 
 WORKDIR ./dist

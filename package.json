@@ -42,7 +42,7 @@
     "tslint": "^5.15.0"
   },
   "scripts": {
-    "start": "ts-node --exec nodemon src/index.js",
+    "start": "nodemon --exec ts-node src/index.ts",
     "build": "tsc -b"
   }
 }
