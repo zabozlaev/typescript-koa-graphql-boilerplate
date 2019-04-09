@@ -8,8 +8,8 @@ services:
       POSTGRES_DB: boilerplate
     # volumes:
     #   - ./pgdata/var/lib/postgresql/data
-    ports:
-      - '6543:5432'
+    # ports:
+    #   - '6543:5432'
   redis:
     image: redis
   api:
@@ -19,8 +19,11 @@ services:
       - redis
     links:
       - redis
+      - db
     ports:
       - '8888:8888'
     environment:
       - REDIS_POST=6379
       - REDIS_HOST=redis
+      - DB_HOST=db
+      - DB_PORT=5432
