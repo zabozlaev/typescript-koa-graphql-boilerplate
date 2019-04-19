@@ -6,8 +6,8 @@ export const sequelize = new Sequelize({
   dialect: 'postgres',
   username: 'postgres',
   password: '123123',
-  storage: ':memory:',
+  // storage: ':memory:',`
   host: process.env.DB_HOST || '192.168.99.100',
   port: 5432,
-  modelPaths: [__dirname + '../api/**/*.model.ts']
+  modelPaths: [__dirname + '../api/resources/**/*.model.ts']
 });

@@ -4,7 +4,8 @@ import {
   ForeignKey,
   Column,
   Model,
-  AllowNull
+  AllowNull,
+  CreatedAt
 } from 'sequelize-typescript';
 
 import { User } from '../user/user.model';
@@ -20,6 +21,10 @@ export class Social extends Model<Social> {
   @Column
   @AllowNull
   email: string;
+
+  @Column
+  @CreatedAt
+  createdAt: Date;
 
   @ForeignKey(() => User)
   @Column

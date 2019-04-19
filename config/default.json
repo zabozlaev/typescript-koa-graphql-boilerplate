@@ -1,0 +1,7 @@
+{
+  "auth": {
+    "jwt": {
+      "secret": "1l2k3jljsldjaljd28112u3asldajsldjaljd3asldajsl"
+    }
+  }
+}

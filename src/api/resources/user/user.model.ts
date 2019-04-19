@@ -14,7 +14,8 @@ import { Social } from '../social/social.model';
       as: 'socials',
       model: () => Social
     }
-  ]
+  ],
+  attributes: ['id', 'name', 'joinedAt', 'socials']
 })
 export class User extends Model<User> {
   @Column name: string;
